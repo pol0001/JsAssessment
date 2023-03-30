@@ -1,0 +1,29 @@
+let collectionNFT = [];
+
+function mintNFT(_color, _size, _brand, _price) {
+    const shoes = {
+        color: _color,
+        size: _size,
+        brand: _brand,
+        price: _price
+    }
+    collectionNFT.push(shoes);
+}
+
+function listNFTs() {
+    for(let i = 0; i < collectionNFT.length; i++) {
+        console.log(collectionNFT[i]);
+    }
+}
+
+function getTotalSupply () {
+    console.log("TOTAL NFT: " + collectionNFT.length);
+}
+
+mintNFT("WHITE", 10, "NIKE", 5000);
+mintNFT("RED", 9, "ADDIDAS", 6499);
+mintNFT("BLUE", 11, "FILA", 7999);
+
+listNFTs();
+
+getTotalSupply();
